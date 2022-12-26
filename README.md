@@ -11,7 +11,7 @@
 
 ## Project 
 
-
+Using analytical and machine learning algorthms for animal detection from terrestrial remote sensing CameraTrap data of a National Park.
 
 (Internal Communication)
 
