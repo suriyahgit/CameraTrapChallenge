@@ -1,1 +1,4 @@
-data/
+data_ssim/
+data/test
+data/train
+data/val
