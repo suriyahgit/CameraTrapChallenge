@@ -10,6 +10,8 @@
 6. Classify the animals into the min. 4 classes (alternative method)
 
 ## Project 
+
+###Internal Communication
 The data folder still exists in the local project repository, so each time an user adds file to git, the folder that has the data is ignored, this was made possible by .gitignore. Data Folder existing as a part of .gitignore as the data used in this project is classified sensitive. Make sure the folder data is located inside the local project directory.
 
 ### Identify coherent sequences of images (over time) for both Badger and Deer Dataset
