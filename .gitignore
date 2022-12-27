@@ -1,5 +1,4 @@
-data_ssim/
-data/test
-data/train
-data/val
-venv
+Coherant_Sequence/data_ssim/
+custom-yolov7/data/test/
+custom-yolov7/data/train/
+custom-yolov7/data/val/
