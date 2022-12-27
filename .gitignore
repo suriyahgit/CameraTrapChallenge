@@ -1,4 +1,4 @@
-data_ssim/
-data/test
-data/train
-data/val
+Coherant_Sequence/data_ssim/
+data/test/
+data/train/
+data/val/
