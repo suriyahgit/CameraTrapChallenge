@@ -82,7 +82,7 @@ Here is a breakdown of each of the arguments:
     `--view-img`: This flag tells the script to display the image with the predictions overlaid on top.
     `--no-trace`: This flag tells the script to not display traceback information if an error occurs.
 
-##Extending the model to the accomodate 2 additional species
+## Extending the model to the accomodate 2 additional species
 (Under construction)
 
 ## Project Goals
