@@ -8,15 +8,15 @@ This folder contains code to identify coherant sequence of images from a group o
 
 To use this code, you will need to create a virtual environment and install the necessary dependencies. To do this, navigate to the folder containing the code and run the following commands in the terminal:
 
-To create a virtual environment
+To create a virtual environment:
 ```
 python -m venv venv
 ```
-To activate the created environment
+To activate the created environment:
 ```
 source venv/bin/activate
 ```
-To install pip dependencies for the sequence_identification_without_plot.py
+To install pip dependencies for the sequence_identification_without_plot.py:
 ```
 pip install -r requirements.txt
 ```
@@ -32,7 +32,3 @@ jupyter notebook
 4. Extend the BDD dataset with at least 2 additional species (at least 50 images each, day or day & night) of your choice (called BDD+)
 5. Locate the animals in the images (alternative method)
 6. Classify the animals into the min. 4 classes (alternative method)
-
-## Project 
-
-Using analytical and machine learning algorthms for animal detection from terrestrial remote sensing CameraTrap data of a National Park.
