@@ -1,12 +1,12 @@
 # CameraTrapChallenge
 
-This project is part of the CameraTrapChallenge, which aims to develop algorithms for analyzing camera trap data. Using analytical and machine learning algorthms for animal detection from terrestrial remote sensing CameraTrap data of a National Park.
+This project is part of the CameraTrapChallenge, which aims to develop algorithms for analyzing camera trap data. In particular, this project focuses on using analytical and machine learning algorithms to detect and classify animals in camera trap data from a National Park.
 
-## Locating, Detecting and Classifying Deer vs Badger from the dataset
-To locate, detect and classify deer vs badger, yolov7 model is used.  The yolov7 model is cloned into the project folder and customised to satisfy our purpose. The data preparation and process of customising the model is explained below:
+## Locating, Detecting and Classifying Deer vs Badger
+The yolov7 model is used to locate, detect, and classify deer versus badger in the camera trap data. The yolov7 model has been customized for this purpose and is included in the project folder. The following explains the process of preparing the data and customizing the model for this task:
 
-### Data Preparation for Training the yolov7 model and Creating Training Environment
-The image dataset is manually sliced into three different folders, 65% for trining('train'), 20% for validation('val) and the remaining 15% for testing('test') into a folder named `data` in the project directory. Inside `~/data/train/images` fill the images of training dataset, inside `~/data/val/images` fill the images of validation dataset and inside `~/data/test/images` fill the testing dataset.
+### Preparing the Data and Setting Up the Training Environment
+The image dataset has been divided into three folders: 65% for training ('train'), 20% for validation ('val'), and 15% for testing ('test') in a folder called data within the project directory. To use the model, place the training images in `~/data/train/images`, the validation images in `~/data/val/images`, and the test images in `~/data/test/images`.
 
 Creating new conda environment for the dependencies to stay in peace without wrestling:-
 ```
@@ -16,7 +16,7 @@ Activating the conda environment:-
 ```
 conda activate yolov7
 ```
-For labelling the training and validation dataset:-
+### Labeling the Training Images
 ```
 pip install labelImg
 ```
@@ -24,7 +24,7 @@ Open labelImg for labelling the dataset:-
 ```
 labelImg
 ```
-A qt window will open, in that window, use the `Open Dir` button and use this `~/data/train/images` directory to open the training image to label each and every image one by one. Press the Change Save directory to create a `labels` directory in `~/data/train/labels` to save the label for each and every images that's labelled. Make sure to select the format to `Yolo` in that qt window. 
+To label the training images, open the qt window and use the `Open Dir` button to select the `~/data/train/images` directory. Then, use the qt window to label each image one by one. To save the labels for each image, press the `Change Save directory` button and create a `labels` directory in `~/data/train/labels`. Make sure to select the format as `Yolo` in the qt window. This will allow the labeled images and their corresponding labels to be used for training the yolov7 model.
 
 To install dependencies for training:-
 ```
@@ -40,11 +40,11 @@ pip install --upgrade scipy==1.5.0
 
 ### Customising the yolov7 model
 
-To customise the yolov7 model, we should me the following changes from the base model
+To customize the yolov7 model for this project, the following changes should be made to the base model:
 
-1. Duplicating the `yolov7.yaml` in `~/cfg/training/` as `yolov7-custom` and changing the number of classes to `2` as my image dataset contains two classes.
-2. Duplicating the `coco.yaml` in `~/data` as `custom_data.yaml`, editing the file by removing the first four lines that has a download script for downloading the cocodataset, modifying the directory to point out training and validation dataset and modifying the number of classes with class names
-3. Downloading the pre-defined weights for running training from the official yolov7 image in the github, it's named as `yolov7.pt` and `yolov7-tiny.pt`, place them at `~/`, if you are planning to use yolov7-tiny. But for our case, we trained our model with `yolov7.pt` and the customisation performed above are for training yolov7. 
+1. In the `~/cfg/training/` directory, duplicate the `yolov7.yaml` file and name it `yolov7-custom.yaml`. Then, change the number of classes to 2 to reflect the two classes in the image dataset.
+2. In the `~/data directory`, duplicate the `coco.yaml` file and name it `custom_data.yaml`. Edit this file by removing the first four lines containing the download script for the cocodataset, modifying the directory paths to point to the training and validation datasets, and modifying the number of classes and class names to match the image dataset.
+3. Download the pre-defined weights for running training from the official yolov7 repository on GitHub. The weights are named `yolov7.pt` and `yolov7-tiny.pt`, and should be placed in the root directory (`~/`). For this project, the `yolov7.pt` weights were used with the customizations described above to train the yolov7 model.
 
 ### Performing the Training
 
