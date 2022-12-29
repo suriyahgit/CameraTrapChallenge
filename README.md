@@ -15,4 +15,4 @@
 
 ## Project 
 
-Using analytical and machine learning algorthms for animal detection from terrestrial remote sensing CameraTrap data of a National Park.
+Using analytical and machine learning algorithms for animal detection from terrestrial remote sensing CameraTrap data of a National Park.
