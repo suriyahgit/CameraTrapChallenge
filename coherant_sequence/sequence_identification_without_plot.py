@@ -41,7 +41,7 @@ result_file_name = list()
 for item in sequences:
     if item not in result_file_name:
         result_file_name.append(item)
-coherant_seq = result_file_name
+coherent_seq = result_file_name
 
 cs_image = []
 i = 0
